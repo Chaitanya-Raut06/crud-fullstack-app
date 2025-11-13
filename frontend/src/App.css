@@ -1,0 +1,176 @@
+/* Reset and base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 650px;
+  min-height: 90vh; /* Changed from height to min-height */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px 25px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 15px 0 10px;
+  text-align: center;
+}
+
+/* Form */
+.user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.user-form input {
+  padding: 12px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  background: #f9f9f9;
+  font-size: 1rem;
+  color: #000;           /* Pure black text */
+  font-weight: 700;       /* Bold text */
+}
+
+.user-form input:focus {
+  border-color: #007bff;
+  background: white;
+  outline: none;
+}
+
+.btn {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #0056b3;
+  transform: scale(1.03);
+}
+
+/* User list section */
+.user-section {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-top: 10px;
+  padding-right: 5px;
+  padding-bottom: 10px;
+}
+
+.user-list {
+  list-style: none;
+}
+
+.user-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  color: black;
+  padding: 14px 16px;
+  margin: 8px 0;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+.user-item:hover {
+  background: #f2f2f2;
+}
+
+.user-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-btn {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.no-users {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  background: white;
+  border: 1px solid #ddd;
+  font-style: italic;
+  color: #333;
+}
+
+/* Scrollbar for user list */
+.user-section::-webkit-scrollbar {
+  width: 8px;
+}
+
+.user-section::-webkit-scrollbar-thumb {
+  background-color: #007bff;
+  border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .card {
+    padding: 15px;
+  }
+  .title {
+    font-size: 1.6rem;
+  }
+  .subtitle {
+    font-size: 1.2rem;
+  }
+  .user-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .user-actions {
+    margin-top: 8px;
+  }
+}
