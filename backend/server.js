@@ -26,6 +26,10 @@ const dbConnection = async () => {
 };
 
 dbConnection();
+app.get("/", (req, res) => {
+  res.send("✅ CRUD Backend is running!");
+});
+
 
 // ✅ Correct route mounting
 app.use("/api/users", userRoutes);
