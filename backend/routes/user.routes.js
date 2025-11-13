@@ -40,6 +40,7 @@ router.delete("/:id", async (req, res) => {
 
 
 router.get("/", async (req, res) => {
+    res.send("✅ CRUD Backend is running!");
   const users = await User.find();
   res.json(users);
 });
