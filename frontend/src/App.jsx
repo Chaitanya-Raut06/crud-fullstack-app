@@ -46,7 +46,7 @@ function App() {
     setFormData({
       name: user.name,
       email: user.email,
-      password: "",
+      password: user.password,
       age: user.age,
     });
   };
